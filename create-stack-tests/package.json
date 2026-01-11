@@ -1,6 +1,9 @@
 {
-  "name": "@kata/create-stack-tests",
+  "name": "@esimplicity/create-stack-tests",
   "version": "0.1.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "private": false,
   "type": "commonjs",
   "bin": {

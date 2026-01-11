@@ -1,6 +1,9 @@
 {
-  "name": "@kata/stack-tests",
+  "name": "@esimplicity/stack-tests",
   "version": "0.1.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,12 +20,12 @@
   "description": "Reusable Playwright-BDD fixtures, ports, adapters, and step registrations for API/UI/hybrid/TUI testing.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kata/stack-tests"
+    "url": "https://github.com/awest-esimplicity/katalyst-bdd-test"
   },
   "bugs": {
-    "url": "https://github.com/kata/stack-tests/issues"
+    "url": "https://github.com/awest-esimplicity/katalyst-bdd-test/issues"
   },
-  "homepage": "https://github.com/kata/stack-tests",
+  "homepage": "https://github.com/awest-esimplicity/katalyst-bdd-test",
   "license": "SEE LICENSE IN LICENSE",
   "author": "Kata",
   "keywords": [
