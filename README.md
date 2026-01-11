@@ -1,4 +1,4 @@
-# testconvergence
+# Katalyst BDD-Test
 
 Internal monorepo for Playwright BDD testing utilities and scaffolding.
 
@@ -6,8 +6,8 @@ Internal monorepo for Playwright BDD testing utilities and scaffolding.
 
 | Package | Description |
 |---------|-------------|
-| **@kata/stack-tests** (`stack-tests/`) | Reusable fixtures, ports, adapters, and step definitions for API/UI/TUI testing |
-| **@kata/create-stack-tests** (`create-stack-tests/`) | CLI to scaffold a new Playwright-BDD test project |
+| **@esimplicity/stack-tests** (`stack-tests/`) | Reusable fixtures, ports, adapters, and step definitions for API/UI/TUI testing |
+| **@esimplicity/create-stack-tests** (`create-stack-tests/`) | CLI to scaffold a new Playwright-BDD test project |
 
 ## Quick Start
 
@@ -16,10 +16,10 @@ Internal monorepo for Playwright BDD testing utilities and scaffolding.
 npm install
 
 # Build the library
-npm run build -w @kata/stack-tests
+npm run build -w @esimplicity/stack-tests
 
 # Scaffold a new test project
-npx @kata/create-stack-tests my-tests
+npx @esimplicity/create-stack-tests my-tests
 ```
 
 ## Documentation
@@ -99,6 +99,41 @@ npm run lint --workspaces
 - npm >= 9.0.0
 - Playwright >= 1.49.0
 - playwright-bdd >= 8.3.0
+
+## Installation from GitHub Packages
+
+These packages are published to Internal eSimplicity GitHub Packages. To install them:
+
+1. Create or update `.npmrc` in your project root:
+
+```
+@esimplicity:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${NPM_TOKEN}
+```
+
+2. Generate a GitHub Personal Access Token with `read:packages` scope
+
+3. Set the token as an environment variable or in your `.npmrc`:
+
+```bash
+export NPM_TOKEN=your_github_token
+```
+
+4. Install the packages:
+
+```bash
+npm install @esimplicity/stack-tests
+# or scaffold a new project
+npx @esimplicity/create-stack-tests my-tests
+```
+
+## Publishing
+
+Packages are automatically published to GitHub Packages when:
+- A new **GitHub Release** is created
+- The workflow is **manually triggered** from the Actions tab
+
+The workflow builds all packages and publishes them using the `GITHUB_TOKEN`.
 
 ## Notes
 
